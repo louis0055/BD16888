@@ -1,5 +1,5 @@
 (() => {
-  const pixelId = "2115631465757938";
+  const pixelIds = ["2115631465757938", "3066552810355536"];
 
   if (!window.fbq) {
     const fbq = function () {
@@ -20,7 +20,7 @@
     document.head.append(script);
   }
 
-  window.fbq("init", pixelId);
+  for (const id of pixelIds) window.fbq("init", id);
   window.fbq("track", "PageView");
 
   for (const link of document.querySelectorAll('a[href="https://lin.ee/9anAEs2"]')) {
